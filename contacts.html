@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="windows-1251">
+        <meta name="generator" content="WYSIWYG Web Builder 11 - http://www.wysiwygwebbuilder.com">
+        <title>Контакти</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style-contacts.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="wrapper">
+
+            <div class="row top-container">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-7 left-container">
+
+                            <div class="logo-container">
+                                <img src="img/logo.png" alt="">
+                            </div>
+
+                            <div class="text-container">
+                                <h2>ЛИШЕ ПОРІЖ НА ШМАТОЧКИ</h2>
+                                <p>Для собак 900 г / 450 г : з курятиною, з яловичиною<br>Для котів 250 г / 120 г : курятиною</p>
+                            </div>
+
+                            <div class="menu-container">
+                                <ul>
+                                    <li><a href="index.html" >головна</a></li>
+                                    <li><a href="useful.html">корисно</a></li>
+                                    <li><a href="write_us.html">нам пишуть</a></li>
+                                    <li><a href="contacts.html" class="active">контакти</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 right-container">
+                            <div class="social-container">
+                                <a href="https://www.instagram.com/korm_zoolux_cat_dog/" target="_blank"><img src="img/insta.png" alt=""></a>
+                                <a href="https://www.facebook.com/zooluxforyou/" target="_blank"><img src="img/facebook.png" alt=""></a>
+                            </div>
+
+                            <div class="top-banner-pic-con">
+                                <img src="img/cat_dog.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="main-container">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="row info-container">
+                            <div class="col-md-2 icon-container">
+                                <img src="img/mail.png" alt="">
+                            </div>
+
+                            <div class="col-md-10 short-text-con">
+                                <p>замовляйте корм, ставте ваші запитання <span>zoolux12@gmail.com</span></p>
+                            </div>
+                        </div>
+
+                        <div class="row info-container">
+                            <div class="col-md-2 icon-container">
+                                <img src="img/phone.png" alt="">
+                            </div>
+
+                            <div class="col-md-10 short-text-con">
+                                <p>З ПИТАНЬ ПОКУПКИ КОРМУ І КОНСУЛЬТАЦІЙ <span>063-95-55-500</span></p>
+                            </div>
+                        </div>
+
+                        <div class="form-container">
+                            <form method="POST" class="zooluxForm" name="zooluxForm" action="javascript:void(null);" onsubmit="thx();">
+                                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                                <button class="btn send-button" type="submit">відіслати</button>
+                                <input type="reset" class="btn clear-button" value="очистити">
+                            </form>
+                        </div>
+
+
+                        <div class="thx-popUp">
+                            <div class="thx-popup-content">
+                                <div class="close-pic-container">
+                                    <img src="img/close.png" alt="" class="close-pic">
+                                </div>
+                                <p>Дякуємо за надіслане повідомлення!</p>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+
+                            function thx(){
+                                var msg = $("form[name='zooluxForm']").serialize();
+                                $.ajax({
+                                    type: 'POST',
+                                    url: 'mail.php',
+                                    data: msg,
+                                    success: function(data){
+                                        $(".thx-popUp").show();
+                                    },
+                                    error: function(xhr, str){
+                                        alert('Возникла ошибка: ' + xhr.responseCode);
+                                    }
+                                })
+                            }
+
+                            $(document).ready(function(){
+
+                                $(".close-pic").click(function(){
+                                    $(".thx-popUp").hide();
+                                });
+
+                            });
+
+                        </script>
+
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 bottom-text-con">
+                        <p>Запитуйте <span>"ЗОО ЛЮКС"</span> в зоомагазинах міста і в спеціалізованих відділах супермаркетів.</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+
+            <div class="row footer-banner">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <p>Безкоштовна доставка «ЗооЛюкс» по м. Вінниця при купівлі від 50 кілограмів!</p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+        </div>
+
+
+
+    </body>
+</html>

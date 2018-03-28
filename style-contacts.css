@@ -1,0 +1,112 @@
+.main-container{
+    margin-top: 30px;
+}
+
+.main-container p{
+    font-family: Myriad Pro;
+    color: #272727;
+    font-size: 16pt;
+}
+
+.main-container .short-text-con span{
+    color: #8d1b0d;
+    font-weight: 600;
+}
+
+.main-container .info-container{
+    margin: 15px 0;
+}
+
+.bottom-text-con p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bottom-text-con span{
+    color: #8d1b0d;
+}
+
+textarea{
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+    border: 3px solid #3f030f;
+    outline: none;
+}
+
+textarea:focus{
+    border: 5px solid #3f030f;
+    transition: 0.2s;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn{
+    outline: none !important;
+}
+
+.main-container .form-container button,
+.clear-button{
+    padding: 3px !important;
+    margin-top: 15px;
+    outline: none !important;
+    border-radius: 0px !important;
+    background: #3f030f;
+    color: #fff;
+}
+
+.main-container .form-container button:hover,
+.main-container .form-container button:focus,
+.clear-button:hover,
+.clear-button:focus{
+    outline: none !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.4s;
+}
+
+.form-container .send-button{
+    float: right;
+}
+
+.thx-popUp{
+    display: none;
+    position: fixed !important;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.thx-popup-content{
+    background-color: #8d1b0d;
+    margin: 15% auto !important;
+    width: 30% !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close-pic {
+    float: right;
+    padding: 10px;
+}
+
+.thx-popup-content p{
+    color: #fff;
+        padding: 50px 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
